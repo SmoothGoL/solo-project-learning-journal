@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 32px;
+}
+
 html, 
 body {
     margin: 0;
@@ -128,7 +132,7 @@ h2 {
     }
 
     .profile-img {
-        margin-right: 2rem;
+        margin-right: 32px;
     }
 
     .intro-section h2 {
@@ -182,6 +186,7 @@ footer {
     padding: 36px;
     background: #202020;
     color: #ECECEC;
+    margin-top: 50px;
 }
 
 footer p {
