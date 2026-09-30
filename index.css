@@ -1,0 +1,141 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+header {
+    margin: 1.0625em 1.25em 0;
+    display: flex;
+
+}
+
+@media (max-width: 340px) {
+    header {
+        margin: 0.3em 0.6em 0;
+    }  
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.1875em;
+}
+
+.logo-img {
+    width: 1.4475em;
+    width: 1.4475em;
+    display: block;
+}
+
+.logo-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 0.75rem;
+    gap: 3em;
+    padding: 0;
+}
+
+@media (max-width: 340px) {
+    nav ul {
+        gap: 1em;
+    }
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #090909;
+}
+
+
+.intro-section,
+.about-details,
+.recent-posts {
+    margin: 45px 20px 0;
+}
+
+time {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+h2, p {
+    font-size: 1rem;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.recent-posts h2 {
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    .logo-img {
+        width: 34.25px;
+        height: 34.25px;
+    }
+
+    .intro-section {
+        display: flex;
+    }
+}
+
+.profile-img {
+    width: 182px;
+    height: 182px;
+    margin-right: 2em;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.blog-imgs {
+    width: 100%;
+}
+
+.posts-grid time {
+    font-size: 0.875rem;
+}
+
+
+
+
+
+/* my-new-journey.html */
+
+.article-img {
+  /* 1. Define the crop dimensions (landscape aspect ratio) */
+  width: 100%;         /* or 100% / whatever target width you need */
+  height: 70vw;        /* or your target height */
+
+  /* 2. Crop and position towards the bottom */
+  object-fit: cover;
+  object-position: center 70%;
+
+  /* 3. Flip horizontally */
+  transform: scaleX(-1);
+
+  /* 4. Match the darker exposure */
+  filter: brightness(0.85); 
+}
