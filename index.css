@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, 
 body {
     margin: 0;
@@ -27,8 +31,8 @@ header {
 }
 
 .logo-img {
-    width: 1.4475em;
-    width: 1.4475em;
+    width: 1.4475rem;
+    width: 1.4475rem;
     display: block;
 }
 
@@ -47,8 +51,24 @@ nav ul {
     display: flex;
     list-style-type: none;
     font-size: 0.75rem;
+    font-weight: 600;
     gap: 3em;
     padding: 0;
+}
+
+@media (min-width: 500px) {
+    .logo-img {
+        height: 2.141rem;
+        width: 2.141rem;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    nav ul {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 340px) {
@@ -75,6 +95,15 @@ time {
     text-transform: uppercase;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-h1 {
+    font-size: 2.1775rem;
+}
+
 h2, p {
     font-size: 1rem;
 }
@@ -87,39 +116,88 @@ h2 {
     text-align: center;
 }
 
+.profile-img {
+    width: 182px;
+    height: auto;
+}
 
 @media (min-width: 768px) {
-    .logo-img {
-        width: 34.25px;
-        height: 34.25px;
-    }
-
     .intro-section {
         display: flex;
+        align-items: center;
+    }
+
+    .profile-img {
+        margin-right: 2rem;
+    }
+
+    .intro-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .about-details {
+        padding: 0 7vw;
     }
 }
 
-.profile-img {
-    width: 182px;
-    height: 182px;
-    margin-right: 2em;
+@media (max-width: 340px) {
+    .profile-img {
+        width: min(182px, 100%);
+    }
 }
 
 .posts-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px 26px;
+}
+
+@media (max-width: 340px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .blog-imgs {
     width: 100%;
+    aspect-ratio: 309 / 232;
+    object-fit: cover;
+}
+
+.posts-grid p {
+    margin: 0.2em 0;
 }
 
 .posts-grid time {
     font-size: 0.875rem;
 }
 
+.posts-grid h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.3em 0 0.2em;
+}
 
+footer {
+    padding: 36px;
+    background: #202020;
+    color: #ECECEC;
+}
 
+footer p {
+    margin: 0;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+footer strong {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+footer small {
+    font-size: inherit;
+}
 
 
 /* my-new-journey.html */
@@ -139,3 +217,6 @@ h2 {
   /* 4. Match the darker exposure */
   filter: brightness(0.85); 
 }
+
+
+
